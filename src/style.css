@@ -5,6 +5,7 @@
   --primary-text-color: #fff;
   --hover-background-color: #2a3448;
 }
+
 * {
   font-family: "Permanent Marker", Arial, sans-serif;
   font-weight: 400;
@@ -166,14 +167,14 @@ h2 {
     margin: 0 6px 20px 6px;
   }
 
-  .hidden-button {
-    display: none;
-  }
-
   .explode-button {
     margin: 0px;
     display: flex;
     flex-direction: row;
     gap: 10px;
+  }
+  
+  .hidden-button {
+    display: none;
   }
 }
