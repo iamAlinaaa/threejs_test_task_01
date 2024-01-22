@@ -1,0 +1,179 @@
+@import url("https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap");
+
+:root {
+  --primary-border-color: #86a4f8;
+  --primary-text-color: #fff;
+  --hover-background-color: #2a3448;
+}
+* {
+  font-family: "Permanent Marker", Arial, sans-serif;
+  font-weight: 400;
+  line-height: 1.7;
+}
+
+body {
+  position: fixed;
+  top: 0;
+  left: 0;
+  outline: none;
+  margin: 0;
+  width: 100%;
+  height: 100%;
+}
+
+h2 {
+  color: var(--primary-text-color);
+  font-size: 1.7rem;
+}
+
+.full-screen {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  background-image: url("../static/whirl.jpg");
+  background-size: cover;
+}
+
+.info-panel {
+  text-align: center;
+  border-radius: 15px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: rgba(148, 193, 251, 0.2);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(5.5px);
+  -webkit-backdrop-filter: blur(5.5px);
+  border-radius: 10px;
+  width: 12.5rem;
+}
+
+.form {
+  gap: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.action-button {
+  border-color: var(--primary-border-color);
+  border-radius: 10px;
+  color: var(--primary-text-color);
+  box-shadow: 0 0 40px 40px var(--primary-border-color) inset,
+    0 0 0 0 var(--primary-border-color);
+  transition: all 150ms ease-in-out;
+  cursor: pointer;
+  text-align: center;
+  font-size: 1rem;
+  text-decoration: none;
+  width: 7.5rem;
+  margin-bottom: 14px;
+}
+
+.action-button:hover {
+  box-shadow: 0 0 10px 0 var(--primary-border-color) inset,
+    0 0 10px 4px var(--primary-border-color);
+  background-color: var(--hover-background-color);
+}
+
+.explode-button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+}
+
+.hidden-button {
+  display: none;
+}
+
+.input-group {
+  margin-bottom: 16px;
+}
+
+.label {
+  color: var(--primary-text-color);
+  font-size: 1rem;
+}
+
+.input {
+  border-radius: 10px;
+  padding-left: 10px;
+  font-size: 1rem;
+}
+
+.input:hover {
+  caret-color: black;
+}
+
+.input:focus {
+  outline: none;
+}
+
+.webgl {
+  width: 100%;
+  height: 100%;
+}
+
+/* mobile */
+@media (max-width: 767px) {
+  h2 {
+    display: none;
+  }
+
+  .info-panel {
+    top: 0;
+    right: auto;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    height: 4.4rem;
+  }
+
+  .form {
+    display: flex;
+    flex-direction: row;
+    margin-left: 10px;
+    margin-top: 1rem;
+  }
+
+  #cubeForm {
+    margin: 0;
+    gap: 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  #cubeForm * {
+    margin: 0;
+  }
+
+  .label {
+    display: none;
+  }
+  .input {
+    vertical-align: top;
+  }
+
+  .action-button {
+    font-size: 0.8rem;
+    width: 5rem;
+    padding: 6px 0;
+    margin: 0 6px 20px 6px;
+  }
+
+  .hidden-button {
+    display: none;
+  }
+
+  .explode-button {
+    margin: 0px;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+  }
+}

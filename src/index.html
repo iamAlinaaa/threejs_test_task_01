@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Test task 01</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="full-screen">
+      <canvas class="webgl"></canvas>
+      <div class="info-panel">
+        <h2>Magic Cube</h2>
+        <div class="form">
+          <form id="cubeForm" autocomplete="off">
+            <div class="input-group">
+              <label class="label" for="x">X axis:</label>
+              <input
+                class="input"
+                type="number"
+                name="x"
+                id="x"
+                min="1"
+                max="64"
+                required
+                value="4"
+              />
+            </div>
+
+            <div class="input-group">
+              <label class="label" for="y">Y axis:</label>
+              <input
+                class="input"
+                type="number"
+                name="y"
+                id="y"
+                min="1"
+                max="64"
+                required
+                value="4"
+              />
+            </div>
+
+            <div class="input-group">
+              <label class="label" for="z">Z axis:</label>
+              <input
+                class="input"
+                type="number"
+                name="z"
+                id="z"
+                min="1"
+                max="64"
+                required
+                value="4"
+              />
+            </div>
+
+            <button class="action-button" type="submit">Generate</button>
+          </form>
+
+          <!-- <div class="explode-button"> -->
+            <button
+              class="action-button  explode-button hidden-button"
+              id="explode"
+              type="submit"
+            >
+              Explode
+            </button>
+          <!-- </div> -->
+        </div>
+      </div>
+    </div>
+    <script type="module" src="./script.js"></script>
+  </body>
+</html>
