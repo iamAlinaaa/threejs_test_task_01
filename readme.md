@@ -1,4 +1,4 @@
-# Three.js Journey
+## Generate Magic Cube
 
 ## Setup
 Download [Node.js](https://nodejs.org/en/download/).
