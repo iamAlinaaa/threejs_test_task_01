@@ -31,6 +31,7 @@ const chooseRandomTexture = () => {
   return textures[randomIndex];
 };
 
+// get random meshes with positions and already centered
 const getRandomMeshes = (cubeDimensions) => {
   let amountOfMeshes = Object.values(cubeDimensions).reduce(
     (sum, current) => +sum * +current
