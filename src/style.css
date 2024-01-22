@@ -121,7 +121,6 @@ h2 {
 
 /* mobile */
 @media (max-width: 767px) {
-
   h2 {
     display: none;
   }
@@ -157,7 +156,7 @@ h2 {
   .label {
     display: none;
   }
-  
+
   .input {
     vertical-align: top;
   }
@@ -175,7 +174,7 @@ h2 {
     flex-direction: row;
     gap: 10px;
   }
-  
+
   .hidden-button {
     display: none;
   }
