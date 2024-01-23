@@ -21,14 +21,9 @@ airTexture.colorSpace = THREE.SRGBColorSpace;
 
 const textures = [fireTexture, waterTexture, groundTexture, airTexture];
 
-const chooseRandomGeometry = () => {
-  let randomIndex = Math.floor(Math.random() * geometries.length);
-  return geometries[randomIndex];
-};
-
-const chooseRandomTexture = () => {
-  let randomIndex = Math.floor(Math.random() * textures.length);
-  return textures[randomIndex];
+const chooseRandomElement = (array) => {
+  let randomIndex = Math.floor(Math.random() * array.length);
+  return array[randomIndex];
 };
 
 // get random meshes with positions and already centered
@@ -41,9 +36,9 @@ const getRandomMeshes = (cubeDimensions) => {
 
   for (let i = 0; i < amountOfMeshes; i++) {
     const material = new THREE.MeshBasicMaterial({
-      map: chooseRandomTexture(),
+      map: chooseRandomElement(textures),
     });
-    const mesh = new THREE.Mesh(chooseRandomGeometry(), material);
+    const mesh = new THREE.Mesh(chooseRandomElement(geometries), material);
 
     mesh.position.set(
       meshPositions.x - (cubeDimensions.x - 1) / 2,
