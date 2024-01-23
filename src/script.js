@@ -90,9 +90,7 @@ const generateCube = (cubeDimensions) => {
   // Animate
   const tick = () => {
     controls.update();
-
     renderer.render(scene, camera);
-
     window.requestAnimationFrame(tick);
   };
 
