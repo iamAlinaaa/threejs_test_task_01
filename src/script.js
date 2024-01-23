@@ -38,7 +38,7 @@ explodeButton.addEventListener("click", () => {
 // Generate cube
 const generateCube = (cubeDimensions) => {
   scene.clear();
-  explodeButton.classList.remove('hidden-button')
+  explodeButton.classList.remove("hidden-button");
 
   randomMeshes = getRandomMeshes(cubeDimensions);
   for (let mesh of randomMeshes) {
